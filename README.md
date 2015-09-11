@@ -33,3 +33,5 @@ API:
 - `indexFromText(text, [lang])`
 - `textFromCode(code, [lang])`
 - `codeFromText(text, [lang])`
+- `codeMap` = `[14,1,2,3,4,5,6,7,8,..]`
+- `textMaps` = `[["微笑",..], ["Smile",..]]`
