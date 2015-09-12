@@ -16,14 +16,14 @@ qqface.textFromIndex(0)
 qqface.codeFromText('发呆')
 //=> 3
 qqface.indexFromText('委屈')
-//=> 49
+//=> 106
 ```
 
 名词解释:
 
 - `text`为表情对应的文字信息
 - `code`为表情对应的数字码
-- `index`为表情选择栏上的显示序号
+- `index`为(webqq)表情选择栏上的显示序号
 
 API:
 

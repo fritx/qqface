@@ -1,13 +1,19 @@
 {
   "name": "qqface",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "经典QQ表情/文字替换",
   "keywords": [
-  	"qq",
-  	"face",
-  	"emotion",
-  	"wqq",
-  	"qqlog"
+    "qq",
+    "face",
+    "emotion",
+    "wqq",
+    "qqlog"
   ],
-  "repository": "git@github.com:fritx/qqface.git"
+  "repository": "git@github.com:fritx/qqface.git",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.2"
+  }
 }
