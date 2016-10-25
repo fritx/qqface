@@ -1,7 +1,7 @@
 # qqface
 
 经典QQ表情/文字替换 已应用于[qqlog](https://github.com/fritx/qqlog)<br>
-版本0.1.0新增了png/gif图片目录
+版本0.1.x新增了png/gif图片目录
 
 ```js
 var qqface = require('qqface')
@@ -17,7 +17,7 @@ qqface.textFromIndex(0)
 qqface.codeFromText('发呆')
 //=> 3
 qqface.indexFromText('委屈')
-//=> 106
+//=> 49
 ```
 
 ```js

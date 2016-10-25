@@ -1,6 +1,6 @@
 {
   "name": "qqface",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "经典QQ表情/文字替换 + png/gif图片",
   "keywords": [
     "qq",
@@ -10,6 +10,7 @@
     "qqlog"
   ],
   "repository": "git@github.com:fritx/qqface.git",
+  "license": "ISC",
   "scripts": {
     "test": "mocha"
   },

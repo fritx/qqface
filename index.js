@@ -1,5 +1,3 @@
-var join = require('path').join
-
 // 摘自smartQQ 压缩后的js代码
 // http://pub.idqqimg.com/smartqq/js/mq.js
 // face对应的text
@@ -65,7 +63,11 @@ exports.gifFromIndex = gifFromIndex
 
 function imgFromIndex(index, type){
   // 必须逗号依次隔开 否则路径不会normalize
-  return join(__dirname, 'img', index+'.'+type)
+  // return join(__dirname, 'img', index+'.'+type)
+
+  // 确保统一posix形式路径 方便用户匹配
+  // 同 https://github.com/devongovett/apple-color-emoji
+  return __dirname + '/img/' + index+'.'+type
 }
 function pngFromIndex(index){
   return imgFromIndex(index, 'png')
