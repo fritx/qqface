@@ -1,7 +1,7 @@
 {
   "name": "qqface",
-  "version": "0.0.3",
-  "description": "经典QQ表情/文字替换",
+  "version": "0.1.1",
+  "description": "经典QQ表情/文字替换 + png/gif图片",
   "keywords": [
     "qq",
     "face",

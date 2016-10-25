@@ -1,3 +1,4 @@
+var join = require('path').join
 
 // 摘自smartQQ 压缩后的js代码
 // http://pub.idqqimg.com/smartqq/js/mq.js
@@ -57,6 +58,21 @@ exports.indexFromText = indexFromText
 exports.textFromCode = textFromCode
 exports.codeFromText = codeFromText
 
+exports.imgPrefix = 'qqface/img/'
+exports.imgFromIndex = imgFromIndex
+exports.pngFromIndex = pngFromIndex
+exports.gifFromIndex = gifFromIndex
+
+function imgFromIndex(index, type){
+  // 必须逗号依次隔开 否则路径不会normalize
+  return join(__dirname, 'img', index+'.'+type)
+}
+function pngFromIndex(index){
+  return imgFromIndex(index, 'png')
+}
+function gifFromIndex(index){
+  return imgFromIndex(index, 'gif')
+}
 
 function indexFromCode(code){
 	var index = codeMap.indexOf(code)
