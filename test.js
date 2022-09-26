@@ -3,24 +3,31 @@ var qqface = require('./')
 
 describe('qqface', function(){
 
-	it('textFromCode', function(){
-		assert.equal(qqface.textFromCode(14), '微笑')
-		assert.equal(qqface.textFromCode(14, 'en'), 'Smile')
-	})
-
 	it('textFromIndex', function(){
 		assert.equal(qqface.textFromIndex(0), '微笑')
+		assert.equal(qqface.textFromIndex(0, 'zh'), '微笑')
+		assert.equal(qqface.textFromIndex(0, 'en'), 'Smile')
 
 		assert.equal(qqface.textFromIndex(9), '大哭')
 		assert.equal(qqface.textFromIndex(14), '惊讶')
 	})
 
-	it('codeFromText', function(){
-		assert.equal(qqface.codeFromText('发呆'), 3)
-		assert.equal(qqface.codeFromText('委屈'), 106)
+	it('indexFromText', function(){
+		assert.equal(qqface.indexFromText('委屈'), 49)
+		assert.equal(qqface.indexFromText('委屈', 'en'), 49)
+		assert.equal(qqface.indexFromText('委屈', 'zh'), 49)
+		assert.equal(qqface.indexFromText('Shrunken'), 49)
+		assert.equal(qqface.indexFromText('Shrunken', 'en'), 49)
+		assert.equal(qqface.indexFromText('Shrunken', 'zh'), 49)
+	})
 
-		assert.equal(qqface.codeFromText('微笑'), 14)
-		assert.equal(qqface.codeFromText('Smile', 'en'), 14)
+	it('imgFromIndex', function(){
+		assert.equal(qqface.imgFromIndex(104, 'png'), 'https://unpkg.com/qqface@0.1.2/img/104.png')
+		assert.equal(qqface.imgFromIndex(104), 'https://unpkg.com/qqface@0.1.2/img/104.png')
+
+		assert.equal(qqface.imgFromIndex(121, 'gif'), 'https://unpkg.com/qqface@0.1.2/img/121.gif')
+		assert.equal(qqface.imgFromIndex(121, 'png'), 'https://unpkg.com/qqface@0.1.2/img/121.gif')
+		assert.equal(qqface.imgFromIndex(121), 'https://unpkg.com/qqface@0.1.2/img/121.gif')
 	})
 
 })
