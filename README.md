@@ -1,5 +1,7 @@
 # qqface
 
+<img height="20" src="https://img.shields.io/npm/dm/qqface.svg">
+
 经典QQ表情/文字替换 已应用于[qqlog](https://github.com/fritx/qqlog)<br>
 *版本0.1.x新增了png/gif图片目录*
 
@@ -9,9 +11,7 @@
 这是一个底层依赖 如果你想要的是 完整的文本解析/替换函数 请查看[qtext-parse](https://github.com/we-digest/qtext-parse)
 
 ```sh
-npm install --save qqface@next
-# 或者
-npm install --save qqface@0.2.0-alpha.1
+npm install --save qqface
 ```
 
 ```js
